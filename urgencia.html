@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Endereços de atendimento psicológico de urgência com busca por bairro e CEP."
+    />
+    <title>Atendimento de Urgência</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="urgencia">
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title">Atendimento de Urgência</h1>
+        <p class="site-tagline">Encontre rapidamente a unidade de urgência mais próxima.</p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <a class="back-link" href="index.html">Voltar para início</a>
+
+      <section class="card warning-card">
+        <h2>Em situação grave agora</h2>
+        <p>Ligue <strong>188 (CVV)</strong> para apoio emocional e <strong>192 (SAMU)</strong> para emergência.</p>
+      </section>
+
+      <section class="card">
+        <h2>Buscar unidade mais próxima</h2>
+        <form id="search-form" class="search-form" novalidate>
+          <label for="bairro">Bairro</label>
+          <input id="bairro" name="bairro" type="text" placeholder="Ex.: Benfica" />
+
+          <label for="cep">CEP</label>
+          <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="Ex.: 60020-180" />
+
+          <button class="btn btn-danger" type="submit">Encontrar local mais próximo</button>
+        </form>
+        <p id="status-message" class="hint"></p>
+      </section>
+
+      <section class="card">
+        <h2>Endereços</h2>
+        <ul id="results-list" class="result-list"></ul>
+      </section>
+    </main>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

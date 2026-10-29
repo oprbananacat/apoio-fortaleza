@@ -1,0 +1,1533 @@
+================================================================================
+APOIO FORTALEZA - PACOTE ÚNICO DE CÓDIGO
+Site estático: HTML + CSS + JavaScript
+
+COMO USAR ESTE ARQUIVO:
+- Cada bloco começa com FILE: nome-do-arquivo
+- Copie o conteúdo entre os marcadores para o arquivo correspondente na mesma pasta
+- Execute na pasta do projeto: python3 -m http.server 8080
+- Abra: http://127.0.0.1:8080/
+
+Dependências externas (CDN): Tailwind, Google Fonts, Lucide Icons
+================================================================================
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+FILE: index.html
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Apoio Fortaleza: plataforma de apoio psicológico com acolhimento, atendimento urgente e recursos de saúde mental."
+    />
+    <title>Apoio Fortaleza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryBlue: "#6EA8FE",
+              softGreen: "#A8D5BA",
+              iceWhite: "#F8FAFC",
+              softLilac: "#CDB4DB",
+              elegantGray: "#4B5563"
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+              nunito: ["Nunito", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(38, 78, 126, 0.12)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body class="font-inter text-elegantGray bg-iceWhite">
+    <div class="min-h-screen page-gradient">
+      <header class="sticky top-0 z-50 backdrop-blur-md bg-white/75 border-b border-white/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+          <a href="#inicio" class="flex items-center gap-3">
+            <span
+              class="w-10 h-10 rounded-2xl bg-gradient-to-br from-primaryBlue to-softLilac text-white flex items-center justify-center shadow-soft"
+              aria-hidden="true"
+            >
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </span>
+            <span class="font-poppins text-xl font-semibold text-slate-800">Apoio Fortaleza</span>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium" aria-label="Navegação principal">
+            <a href="#inicio" class="nav-link">Início</a>
+            <a href="#apoio-imediato" class="nav-link">Apoio imediato</a>
+            <a href="#atendimento" class="nav-link">Atendimento</a>
+            <a href="#recursos" class="nav-link">Recursos</a>
+            <a href="#contato" class="nav-link">Contato</a>
+          </nav>
+
+          <a
+            href="urgencia.html"
+            class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primaryBlue to-softLilac hover:scale-[1.02] transition-all duration-300 shadow-soft"
+          >
+            <i data-lucide="siren" class="w-4 h-4"></i>
+            Preciso de ajuda
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section id="inicio" class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+          <div
+            class="grid lg:grid-cols-2 items-center gap-10 rounded-3xl p-6 sm:p-8 lg:p-12 bg-white/45 border border-white/70 backdrop-blur-xl shadow-soft reveal"
+          >
+            <div class="space-y-6">
+              <span
+                class="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 bg-softGreen/45 rounded-full px-4 py-1.5"
+              >
+                <i data-lucide="shield-heart" class="w-4 h-4"></i>
+                Acolhimento seguro e humano
+              </span>
+              <h1 class="font-poppins text-3xl sm:text-4xl lg:text-5xl text-slate-800 leading-tight">
+                Você não precisa enfrentar tudo sozinho.
+              </h1>
+              <p class="text-base sm:text-lg text-elegantGray/90 max-w-xl">
+                Encontre apoio psicológico, atendimento emergencial e locais de acolhimento perto de
+                você.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-2">
+                <a
+                  href="#atendimento"
+                  class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-white bg-primaryBlue hover:bg-blue-500 transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  <i data-lucide="compass" class="w-4 h-4"></i>
+                  Encontrar apoio
+                </a>
+                <a
+                  href="urgencia.html"
+                  class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-slate-700 bg-white border border-slate-200 hover:border-primaryBlue/40 hover:text-primaryBlue transition-all duration-300"
+                >
+                  <i data-lucide="triangle-alert" class="w-4 h-4"></i>
+                  Atendimento urgente
+                </a>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -top-10 -left-8 w-28 h-28 bg-softLilac/50 rounded-full blur-2xl"></div>
+              <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-softGreen/50 rounded-full blur-2xl"></div>
+              <div
+                class="relative bg-white/65 border border-white rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-soft illustration-card"
+              >
+                <svg viewBox="0 0 340 250" class="w-full h-auto" role="img" aria-label="Ilustração de acolhimento e escuta psicológica">
+                  <defs>
+                    <linearGradient id="bgAcolhe" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#6EA8FE" stop-opacity="0.2" />
+                      <stop offset="100%" stop-color="#CDB4DB" stop-opacity="0.28" />
+                    </linearGradient>
+                    <linearGradient id="personA" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#A8D5BA" />
+                      <stop offset="100%" stop-color="#8DC4A4" />
+                    </linearGradient>
+                    <linearGradient id="personB" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#6EA8FE" />
+                      <stop offset="100%" stop-color="#8EBBFF" />
+                    </linearGradient>
+                    <linearGradient id="heartSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#CDB4DB" />
+                      <stop offset="100%" stop-color="#B79ACC" />
+                    </linearGradient>
+                  </defs>
+
+                  <rect x="10" y="18" width="320" height="214" rx="34" fill="url(#bgAcolhe)" />
+
+                  <circle cx="118" cy="98" r="28" fill="url(#personA)" />
+                  <circle cx="222" cy="98" r="28" fill="url(#personB)" />
+
+                  <path
+                    d="M84 170c0-24 15-42 34-42h12c12 0 20 7 24 14 4-7 12-14 24-14h12c19 0 34 18 34 42"
+                    fill="none"
+                    stroke="#4B5563"
+                    stroke-opacity="0.28"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M98 164c10-22 24-33 42-33 13 0 21 5 30 16 9-11 17-16 30-16 18 0 32 11 42 33"
+                    fill="none"
+                    stroke="#F8FAFC"
+                    stroke-opacity="0.95"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M170 120c-8-10-22-3-22 8 0 10 11 17 22 25 11-8 22-15 22-25 0-11-14-18-22-8z"
+                    fill="url(#heartSoft)"
+                  />
+
+                  <path
+                    d="M122 96c4-3 8-4 12-4M206 96c4-3 8-4 12-4"
+                    stroke="#ffffff"
+                    stroke-opacity="0.65"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+
+                  <circle cx="170" cy="62" r="10" fill="#F8FAFC" opacity="0.9" />
+                  <path
+                    d="M170 50v-10M156 54l-7-7M184 54l7-7"
+                    stroke="#6EA8FE"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="0.7"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="apoio-imediato" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div class="text-center mb-8 reveal">
+            <h2 class="font-poppins text-2xl sm:text-3xl text-slate-800 mb-3">Como você está se sentindo?</h2>
+            <p class="text-elegantGray/90">Escolha uma opção para encontrar caminhos de cuidado e acolhimento.</p>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <button class="feeling-card reveal" type="button" aria-pressed="false"><span>😟</span><span>Ansiedade</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false"><span>😔</span><span>Tristeza</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false"><span>😰</span><span>Crise emocional</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false" data-url="rotina.html"><span>🌱</span><span>Quero acompanhamento</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false" data-url="https://www.cvv.org.br/"><span>💬</span><span>Preciso conversar</span></button>
+          </div>
+        </section>
+
+        <section id="atendimento" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div class="text-center mb-8 reveal">
+            <h2 class="font-poppins text-2xl sm:text-3xl text-slate-800 mb-3">Tipos de atendimento</h2>
+            <p class="text-elegantGray/90">Selecione o tipo de apoio ideal para seu momento.</p>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6">
+            <article class="service-card reveal">
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="font-poppins text-xl text-slate-800">🆘 Atendimento de urgência</h3>
+                  <p class="text-elegantGray mt-2">
+                    Para momentos de crise emocional intensa e necessidade de acolhimento imediato.
+                  </p>
+                </div>
+                <i data-lucide="shield-alert" class="w-8 h-8 text-primaryBlue"></i>
+              </div>
+              <a href="urgencia.html" class="pill-btn bg-primaryBlue text-white hover:bg-blue-500">Acessar urgência</a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="font-poppins text-xl text-slate-800">🌿 Atendimento de rotina</h3>
+                  <p class="text-elegantGray mt-2">
+                    Acompanhamento psicológico contínuo, prevenção e cuidado emocional.
+                  </p>
+                </div>
+                <i data-lucide="sprout" class="w-8 h-8 text-emerald-500"></i>
+              </div>
+              <a href="rotina.html" class="pill-btn bg-softGreen text-slate-800 hover:bg-emerald-300">
+                Acessar rotina
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section id="recursos" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div class="text-center mb-8 reveal">
+            <h2 class="font-poppins text-2xl sm:text-3xl text-slate-800 mb-3">Recursos rápidos</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a href="https://www.cvv.org.br/" target="_blank" rel="noopener noreferrer" class="resource-card reveal"><i data-lucide="phone-call"></i><span>CVV (Centro de Valorização da Vida)</span></a>
+            <a href="rotina.html?tipo=caps" class="resource-card reveal"><i data-lucide="map-pin"></i><span>CAPS próximos</span></a>
+            <a href="rotina.html?tipo=ubs" class="resource-card reveal"><i data-lucide="cross"></i><span>UBS de Fortaleza</span></a>
+            <a href="rotina.html?tipo=consultorio-rua" class="resource-card reveal"><i data-lucide="map"></i><span>Consultório na Rua</span></a>
+            <a href="urgencia.html?tipo=hospital" class="resource-card reveal"><i data-lucide="building-2"></i><span>Hospitais</span></a>
+            <a href="rotina.html?tipo=atencao-primaria" class="resource-card reveal"><i data-lucide="stethoscope"></i><span>Atenção primária</span></a>
+            <a href="urgencia.html" class="resource-card reveal"><i data-lucide="contact-round"></i><span>Telefones úteis</span></a>
+            <a href="tel:192" class="resource-card reveal"><i data-lucide="siren"></i><span>Emergência 192</span></a>
+            <a href="rotina.html?tipo=universidade" class="resource-card reveal"><i data-lucide="graduation-cap"></i><span>Apoio psicológico em universidades</span></a>
+            <a href="rotina.html?tipo=convivencia-cultura" class="resource-card reveal"><i data-lucide="palette"></i><span>Convivência e cultura</span></a>
+          </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+          <div class="grid md:grid-cols-3 gap-4">
+            <blockquote class="quote-card reveal">“Pedir ajuda é um ato de coragem.”</blockquote>
+            <blockquote class="quote-card reveal">“Você merece cuidado.”</blockquote>
+            <blockquote class="quote-card reveal">“Sua saúde mental importa.”</blockquote>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contato" class="border-t border-white/70 bg-white/60 backdrop-blur-sm mt-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="font-poppins text-lg text-slate-800 mb-3">Apoio Fortaleza</h3>
+              <p class="text-sm text-elegantGray">
+                Plataforma informativa para acesso rápido a recursos de saúde mental em Fortaleza.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700 mb-3">Links úteis</h4>
+              <ul class="space-y-2 text-sm">
+                <li><a href="#inicio" class="footer-link">Início</a></li>
+                <li><a href="urgencia.html" class="footer-link">Apoio imediato</a></li>
+                <li><a href="rotina.html" class="footer-link">Atendimento</a></li>
+                <li><a href="#recursos" class="footer-link">Recursos</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700 mb-3">Contato</h4>
+              <ul class="space-y-2 text-sm text-elegantGray">
+                <li>Email: contato@apoiofortaleza.com.br</li>
+                <li>Emergência: <a href="tel:192" class="footer-link">192 (SAMU)</a></li>
+                <li>CVV: <a href="tel:188" class="footer-link">188</a></li>
+              </ul>
+              <div class="flex items-center gap-3 mt-4">
+                <a href="#" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-link"><i data-lucide="linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-slate-200/70 text-sm text-elegantGray">
+            <p>Este site possui caráter informativo e não substitui atendimento profissional.</p>
+            <p class="mt-1">© <span id="year"></span> Apoio Fortaleza. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("revealed");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.16 }
+      );
+
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        observer.observe(el);
+      });
+
+      var feelingButtons = document.querySelectorAll(".feeling-card");
+      feelingButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          feelingButtons.forEach(function (item) {
+            item.classList.remove("is-selected");
+            item.setAttribute("aria-pressed", "false");
+          });
+          button.classList.add("is-selected");
+          button.setAttribute("aria-pressed", "true");
+
+          var destination = button.getAttribute("data-url");
+          if (destination) {
+            var isExternal = destination.indexOf("http") === 0;
+            if (isExternal) {
+              window.open(destination, "_blank", "noopener,noreferrer");
+            } else {
+              window.location.href = destination;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+FILE: rotina.html
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Endereços de atendimento psicológico de rotina com busca por bairro e CEP."
+    />
+    <title>Atendimento de Rotina</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="rotina">
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title">Atendimento de Rotina</h1>
+        <p class="site-tagline">
+          Escolha uma unidade para acompanhamento psicológico regular, incluindo CAPS e opções em
+          universidades.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <a class="back-link" href="index.html">Voltar para início</a>
+
+      <section class="card">
+        <h2>Buscar unidade mais próxima</h2>
+        <form id="search-form" class="search-form" novalidate>
+          <label for="bairro">Bairro</label>
+          <input id="bairro" name="bairro" type="text" placeholder="Ex.: Aldeota" />
+
+          <label for="cep">CEP</label>
+          <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="Ex.: 60160-081" />
+
+          <button class="btn btn-secondary" type="submit">Encontrar local mais próximo</button>
+        </form>
+        <p id="status-message" class="hint"></p>
+      </section>
+
+      <section class="card">
+        <h2>Endereços</h2>
+        <ul id="results-list" class="result-list"></ul>
+      </section>
+    </main>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+FILE: urgencia.html
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Endereços de atendimento psicológico de urgência com busca por bairro e CEP."
+    />
+    <title>Atendimento de Urgência</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="urgencia">
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title">Atendimento de Urgência</h1>
+        <p class="site-tagline">Encontre rapidamente a unidade de urgência mais próxima.</p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <a class="back-link" href="index.html">Voltar para início</a>
+
+      <section class="card warning-card">
+        <h2>Em situação grave agora</h2>
+        <p>Ligue <strong>188 (CVV)</strong> para apoio emocional e <strong>192 (SAMU)</strong> para emergência.</p>
+      </section>
+
+      <section class="card">
+        <h2>Buscar unidade mais próxima</h2>
+        <form id="search-form" class="search-form" novalidate>
+          <label for="bairro">Bairro</label>
+          <input id="bairro" name="bairro" type="text" placeholder="Ex.: Benfica" />
+
+          <label for="cep">CEP</label>
+          <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="Ex.: 60020-180" />
+
+          <button class="btn btn-danger" type="submit">Encontrar local mais próximo</button>
+        </form>
+        <p id="status-message" class="hint"></p>
+      </section>
+
+      <section class="card">
+        <h2>Endereços</h2>
+        <ul id="results-list" class="result-list"></ul>
+      </section>
+    </main>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+FILE: main.js
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+(function () {
+  "use strict";
+
+  var urgentUnits = [
+    {
+      name: "UPA Cristo Redentor",
+      address: "Av. Monsenhor Hélio Campos, 420 - Cristo Redentor, Fortaleza - CE",
+      district: "Cristo Redentor",
+      cep: "60337240",
+      note: "Atendimento de urgência 24h",
+      whatsapp: "",
+      lat: -3.7264,
+      lon: -38.5662
+    },
+    {
+      name: "Hospital Instituto Dr. José Frota (IJF)",
+      address: "Rua Barão do Rio Branco, 1816 - Centro, Fortaleza - CE",
+      district: "Centro",
+      cep: "60025130",
+      note: "Emergência e pronto atendimento",
+      whatsapp: "",
+      lat: -3.7349,
+      lon: -38.5268
+    },
+    {
+      name: "CAPS Geral Dr. Nilson de Moura Fé",
+      address: "Rua Maestro Silva Novo, 90 - São João do Tauape, Fortaleza - CE",
+      district: "Sao Joao do Tauape",
+      cep: "60130420",
+      note: "Acolhimento em saúde mental",
+      whatsapp: "",
+      lat: -3.7596,
+      lon: -38.5059
+    },
+    {
+      name: "UPA Praia do Futuro",
+      address: "Rua Ismael Pordeus, s/n - Praia do Futuro, Fortaleza - CE",
+      district: "Praia do Futuro",
+      cep: "60182130",
+      note: "Atendimento de urgência 24h",
+      whatsapp: "",
+      lat: -3.7423,
+      lon: -38.4547
+    },
+    {
+      name: "UPA Autran Nunes",
+      address: "Av. Autran Nunes, s/n - Autran Nunes, Fortaleza - CE",
+      district: "Autran Nunes",
+      cep: "60526160",
+      note: "Atendimento de urgência 24h",
+      whatsapp: "",
+      lat: -3.7589,
+      lon: -38.6139
+    },
+    {
+      name: "UPA Itaperi",
+      address: "Rua Betel, s/n - Itaperi, Fortaleza - CE",
+      district: "Itaperi",
+      cep: "60714150",
+      note: "Atendimento de urgência 24h",
+      whatsapp: "",
+      lat: -3.7783,
+      lon: -38.5598
+    },
+    {
+      name: "UPA Jangurussu",
+      address: "Rua Santa Rita das Cássias, s/n - Jangurussu, Fortaleza - CE",
+      district: "Jangurussu",
+      cep: "60870160",
+      note: "Atendimento de urgência 24h",
+      whatsapp: "",
+      lat: -3.8222,
+      lon: -38.5451
+    },
+    {
+      name: "UPA José Walter",
+      address: "Av. João de Araújo Lima, s/n - Prefeito José Walter, Fortaleza - CE",
+      district: "Jose Walter",
+      cep: "60750265",
+      note: "Atendimento de urgência 24h",
+      whatsapp: "",
+      lat: -3.7908,
+      lon: -38.5435
+    },
+    {
+      name: "Hospital Geral de Fortaleza (HGF)",
+      address: "Rua Ávila Goulart, 900 - Papicu, Fortaleza - CE",
+      district: "Papicu",
+      cep: "60175055",
+      note: "Hospital de referência estadual para urgência e emergência",
+      whatsapp: "",
+      lat: -3.7367,
+      lon: -38.4865
+    },
+    {
+      name: "Hospital Infantil Albert Sabin",
+      address: "Rua Tertuliano Sales, 544 - Vila União, Fortaleza - CE",
+      district: "Vila Uniao",
+      cep: "60410220",
+      note: "Hospital pediátrico de referência",
+      whatsapp: "",
+      lat: -3.7618,
+      lon: -38.5312
+    },
+    {
+      name: "Hospital Distrital Evandro Ayres de Moura (Frotinha Antônio Bezerra)",
+      address: "Rua Cândido Maia, 294 - Antônio Bezerra, Fortaleza - CE",
+      district: "Antonio Bezerra",
+      cep: "60360195",
+      note: "Hospital distrital com pronto atendimento",
+      whatsapp: "",
+      lat: -3.7447,
+      lon: -38.6038
+    },
+    {
+      name: "Hospital Distrital Maria José Barroso de Oliveira (Frotinha Parangaba)",
+      address: "Av. General Osório de Paiva, 1127 - Parangaba, Fortaleza - CE",
+      district: "Parangaba",
+      cep: "60720100",
+      note: "Hospital distrital com atendimento de urgência",
+      whatsapp: "",
+      lat: -3.7768,
+      lon: -38.5662
+    },
+    {
+      name: "Hospital Distrital Gonzaga Mota de Messejana (Frotinha Messejana)",
+      address: "Av. Washington Soares, 7700 - Messejana, Fortaleza - CE",
+      district: "Messejana",
+      cep: "60841190",
+      note: "Hospital distrital com urgência clínica",
+      whatsapp: "",
+      lat: -3.8313,
+      lon: -38.4931
+    },
+    {
+      name: "Hospital da Mulher de Fortaleza",
+      address: "Av. Lineu Machado, 177 - Jóquei Clube, Fortaleza - CE",
+      district: "Joquei Clube",
+      cep: "60520220",
+      note: "Urgência em saúde da mulher (confirmar perfil de porta de entrada)",
+      whatsapp: "",
+      lat: -3.7496,
+      lon: -38.5659
+    },
+    {
+      name: "Hospital Nossa Senhora da Conceição",
+      address: "Rua João XXIII, 1700 - Conjunto Ceará, Fortaleza - CE",
+      district: "Conjunto Ceara",
+      cep: "60533090",
+      note: "Hospital municipal com atendimento de urgência",
+      whatsapp: "",
+      lat: -3.7649,
+      lon: -38.6075
+    },
+    {
+      name: "Hospital Gonzaguinha José Walter",
+      address: "Av. D, s/n - Prefeito José Walter, Fortaleza - CE",
+      district: "Jose Walter",
+      cep: "60750270",
+      note: "Hospital municipal (confirmar especialidades e fluxo de urgência)",
+      whatsapp: "",
+      lat: -3.7901,
+      lon: -38.5452
+    },
+    {
+      name: "Hospital Gonzaguinha Barra do Ceará",
+      address: "Av. Francisco Sá, 5200 - Barra do Ceará, Fortaleza - CE",
+      district: "Barra do Ceara",
+      cep: "60332055",
+      note: "Hospital municipal (confirmar perfil de emergência)",
+      whatsapp: "",
+      lat: -3.7068,
+      lon: -38.5749
+    }
+  ];
+
+  var routineUnits = [
+    {
+      name: "CAPS Geral Nise da Silveira",
+      address: "Rua Soares Bulcão, 1494 - São Gerardo, Fortaleza - CE",
+      district: "Sao Gerardo",
+      cep: "60325560",
+      note: "Atendimento psicológico de rotina",
+      whatsapp: "",
+      lat: -3.7429,
+      lon: -38.5516
+    },
+    {
+      name: "CAPS Geral Prof. Gerardo da Frota Pinto",
+      address: "Rua Pastor Samuel Mungunba, 1269 - Rodolfo Teófilo, Fortaleza - CE",
+      district: "Rodolfo Teofilo",
+      cep: "60430285",
+      note: "Acompanhamento regular em saúde mental",
+      whatsapp: "",
+      lat: -3.7482,
+      lon: -38.5597
+    },
+    {
+      name: "CAPS AD Dr. Airton Monte",
+      address: "Av. Monsenhor Hélio Campos, 138 - Cristo Redentor, Fortaleza - CE",
+      district: "Cristo Redentor",
+      cep: "60337210",
+      note: "Atenção contínua para álcool e outras drogas",
+      whatsapp: "",
+      lat: -3.7252,
+      lon: -38.5658
+    },
+    {
+      name: "Clínica-Escola de Psicologia - UNIFOR",
+      address: "Av. Washington Soares, 1321 - Edson Queiroz, Fortaleza - CE",
+      district: "Edson Queiroz",
+      cep: "60811905",
+      note: "Apoio psicológico universitário (verificar agenda e critérios da instituição)",
+      whatsapp: "",
+      lat: -3.7686,
+      lon: -38.4782
+    },
+    {
+      name: "Serviço de Psicologia Aplicada - UFC (Benfica)",
+      address: "Av. da Universidade, 2762 - Benfica, Fortaleza - CE",
+      district: "Benfica",
+      cep: "60020181",
+      note: "Atendimento psicológico em universidade (verificar triagem e disponibilidade)",
+      whatsapp: "",
+      lat: -3.7444,
+      lon: -38.5367
+    },
+    {
+      name: "Serviço-Escola de Psicologia - Unichristus",
+      address: "Rua João Adolfo Gurgel, 133 - Cocó, Fortaleza - CE",
+      district: "Coco",
+      cep: "60192130",
+      note: "Apoio psicológico em faculdade (confirmar horários e critérios de atendimento)",
+      whatsapp: "",
+      lat: -3.7448,
+      lon: -38.4818
+    },
+    {
+      name: "Núcleo de Apoio Psicológico - Farias Brito",
+      address: "Rua Castro Monte, 1364 - Varjota, Fortaleza - CE",
+      district: "Varjota",
+      cep: "60175210",
+      note: "Atendimento psicológico universitário (verificar disponibilidade de vagas)",
+      whatsapp: "",
+      lat: -3.7285,
+      lon: -38.4896
+    },
+    {
+      name: "Serviço de Psicologia - Ari de Sá",
+      address: "Av. Heráclito Graça, 826 - Centro, Fortaleza - CE",
+      district: "Centro",
+      cep: "60140130",
+      note: "Apoio psicológico acadêmico (confirmar unidade e triagem)",
+      whatsapp: "",
+      lat: -3.7329,
+      lon: -38.5208
+    },
+    {
+      name: "Instituto Fratelli - Apoio Psicológico",
+      address: "Rua Carolina Sucupira, 480 - Aldeota, Fortaleza - CE",
+      district: "Aldeota",
+      cep: "60140120",
+      note: "Apoio emocional e psicológico (verificar formas de atendimento)",
+      whatsapp: "",
+      lat: -3.7315,
+      lon: -38.5012
+    },
+    {
+      name: "UBS Paulo Marcelo - Regional Centro",
+      address: "Rua 25 de Março, 607 - Centro, Fortaleza - CE",
+      district: "Centro",
+      cep: "60060120",
+      note: "Unidade Básica de Saúde com acolhimento e encaminhamento em saúde mental",
+      whatsapp: "",
+      lat: -3.7312,
+      lon: -38.5324
+    },
+    {
+      name: "UBS Mattos Dourado - Edson Queiroz",
+      address: "Rua Sargento Barbosa, 670 - Edson Queiroz, Fortaleza - CE",
+      district: "Edson Queiroz",
+      cep: "60811260",
+      note: "Atenção primária com suporte inicial em saúde mental e encaminhamento",
+      whatsapp: "",
+      lat: -3.7708,
+      lon: -38.4764
+    },
+    {
+      name: "UBS Maria de Lourdes Jereissati - Jangurussu",
+      address: "Rua das Pedrinhas, s/n - Jangurussu, Fortaleza - CE",
+      district: "Jangurussu",
+      cep: "60866130",
+      note: "UBS com atendimento multiprofissional e apoio territorial",
+      whatsapp: "",
+      lat: -3.8178,
+      lon: -38.5369
+    },
+    {
+      name: "Equipe Consultório na Rua - Regional Centro",
+      address: "Rua Guilherme Rocha, 1266 - Centro, Fortaleza - CE",
+      district: "Centro",
+      cep: "60030140",
+      note: "Atenção psicossocial no território para população em situação de rua (confirmar ponto e escala)",
+      whatsapp: "",
+      lat: -3.7296,
+      lon: -38.5307
+    },
+    {
+      name: "Atenção Primária em Saúde Mental - Regional V",
+      address: "Av. Osório de Paiva, 1127 - Parangaba, Fortaleza - CE",
+      district: "Parangaba",
+      cep: "60720240",
+      note: "Porta de entrada da atenção primária para acolhimento e encaminhamento em saúde mental",
+      whatsapp: "",
+      lat: -3.7764,
+      lon: -38.5651
+    },
+    {
+      name: "Centro de Convivência e Cultura em Saúde Mental",
+      address: "Rua Gonçalves Ledo, 777 - Centro, Fortaleza - CE",
+      district: "Centro",
+      cep: "60060120",
+      note: "Espaço de convivência, cultura e fortalecimento de vínculos em saúde mental",
+      whatsapp: "",
+      lat: -3.7314,
+      lon: -38.5319
+    }
+  ];
+
+  var districtCenter = {
+    aldeota: { lat: -3.7343, lon: -38.4964 },
+    benfica: { lat: -3.7441, lon: -38.5361 },
+    centro: { lat: -3.7319, lon: -38.5267 },
+    "cristo redentor": { lat: -3.7262, lon: -38.5655 },
+    "rodolfo teofilo": { lat: -3.7478, lon: -38.5593 },
+    "sao gerardo": { lat: -3.7424, lon: -38.5512 },
+    "sao joao do tauape": { lat: -3.7592, lon: -38.5056 },
+    "edson queiroz": { lat: -3.7686, lon: -38.4782 },
+    coco: { lat: -3.7448, lon: -38.4818 },
+    varjota: { lat: -3.7285, lon: -38.4896 },
+    jangurussu: { lat: -3.8178, lon: -38.5369 },
+    parangaba: { lat: -3.7764, lon: -38.5651 },
+    "praia do futuro": { lat: -3.7423, lon: -38.4547 },
+    "autran nunes": { lat: -3.7589, lon: -38.6139 },
+    itaperi: { lat: -3.7783, lon: -38.5598 },
+    "jose walter": { lat: -3.7908, lon: -38.5435 },
+    papicu: { lat: -3.7367, lon: -38.4865 },
+    "vila uniao": { lat: -3.7618, lon: -38.5312 },
+    "antonio bezerra": { lat: -3.7447, lon: -38.6038 },
+    messejana: { lat: -3.8313, lon: -38.4931 },
+    "joquei clube": { lat: -3.7496, lon: -38.5659 },
+    "conjunto ceara": { lat: -3.7649, lon: -38.6075 },
+    "barra do ceara": { lat: -3.7068, lon: -38.5749 }
+  };
+
+  var cepCenter = {
+    "60025": { lat: -3.7349, lon: -38.5268 },
+    "60130": { lat: -3.7596, lon: -38.5059 },
+    "60325": { lat: -3.7429, lon: -38.5516 },
+    "60337": { lat: -3.7264, lon: -38.5662 },
+    "60430": { lat: -3.7482, lon: -38.5597 },
+    "60020": { lat: -3.7444, lon: -38.5367 },
+    "60811": { lat: -3.7686, lon: -38.4782 },
+    "60192": { lat: -3.7448, lon: -38.4818 },
+    "60175": { lat: -3.7285, lon: -38.4896 },
+    "60140": { lat: -3.7329, lon: -38.5208 },
+    "60060": { lat: -3.7312, lon: -38.5324 },
+    "60866": { lat: -3.8178, lon: -38.5369 },
+    "60030": { lat: -3.7296, lon: -38.5307 },
+    "60720": { lat: -3.7764, lon: -38.5651 },
+    "60182": { lat: -3.7423, lon: -38.4547 },
+    "60526": { lat: -3.7589, lon: -38.6139 },
+    "60714": { lat: -3.7783, lon: -38.5598 },
+    "60870": { lat: -3.8222, lon: -38.5451 },
+    "60750": { lat: -3.7908, lon: -38.5435 },
+    "60410": { lat: -3.7618, lon: -38.5312 },
+    "60360": { lat: -3.7447, lon: -38.6038 },
+    "60841": { lat: -3.8313, lon: -38.4931 },
+    "60520": { lat: -3.7496, lon: -38.5659 },
+    "60533": { lat: -3.7649, lon: -38.6075 },
+    "60332": { lat: -3.7068, lon: -38.5749 }
+  };
+
+  var page = document.body ? document.body.dataset.page : "";
+  if (!page) return;
+
+  var units = page === "urgencia" ? urgentUnits : routineUnits;
+  var filterAliases = {
+    caps: "caps",
+    ubs: "ubs",
+    universidade: "universidade",
+    universidades: "universidade",
+    hospital: "hospital",
+    hospitais: "hospital",
+    "consultorio-rua": "consultorio-rua",
+    "atencao-primaria": "atencao-primaria",
+    "convivencia-cultura": "convivencia-cultura"
+  };
+  var filterLabels = {
+    caps: "CAPS",
+    ubs: "UBS de Fortaleza",
+    universidade: "Apoio psicológico em universidades",
+    hospital: "Hospitais de referência",
+    "consultorio-rua": "Consultório na Rua",
+    "atencao-primaria": "Atenção Primária",
+    "convivencia-cultura": "Convivência e Cultura"
+  };
+
+  var form = document.getElementById("search-form");
+  var bairroInput = document.getElementById("bairro");
+  var cepInput = document.getElementById("cep");
+  var statusMessage = document.getElementById("status-message");
+  var resultsList = document.getElementById("results-list");
+  var urlParams = new URLSearchParams(window.location.search);
+  var requestedFilter = filterAliases[normalizeFilter(urlParams.get("tipo"))] || "";
+  var filteredUnits = getUnitsByFilter(units, requestedFilter);
+
+  function normalizeFilter(value) {
+    return normalizeText(value).replace(/\s+/g, "-");
+  }
+
+  function getUnitType(unit) {
+    var text = normalizeText(unit.name + " " + unit.note);
+    if (text.indexOf("consultorio na rua") !== -1) return "consultorio-rua";
+    if (text.indexOf("convivencia e cultura") !== -1) return "convivencia-cultura";
+    if (text.indexOf("atencao primaria") !== -1) return "atencao-primaria";
+    if (text.indexOf("ubs") !== -1) return "ubs";
+    if (
+      text.indexOf("universidade") !== -1 ||
+      text.indexOf("faculdade") !== -1 ||
+      text.indexOf("clinica-escola") !== -1 ||
+      text.indexOf("servico-escola") !== -1
+    ) {
+      return "universidade";
+    }
+    if (text.indexOf("hospital") !== -1 || text.indexOf("upa") !== -1) return "hospital";
+    if (text.indexOf("caps") !== -1) return "caps";
+    return "geral";
+  }
+
+  function getUnitsByFilter(list, filterType) {
+    if (!filterType) return list;
+    return list.filter(function (unit) {
+      return getUnitType(unit) === filterType;
+    });
+  }
+
+  function normalizeText(value) {
+    return (value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+  }
+
+  function onlyDigits(value) {
+    return (value || "").replace(/\D/g, "");
+  }
+
+  function toRadians(degrees) {
+    return degrees * (Math.PI / 180);
+  }
+
+  function calculateDistanceKm(a, b) {
+    var earthRadius = 6371;
+    var dLat = toRadians(b.lat - a.lat);
+    var dLon = toRadians(b.lon - a.lon);
+    var partA =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(toRadians(a.lat)) *
+        Math.cos(toRadians(b.lat)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+    var partB = 2 * Math.atan2(Math.sqrt(partA), Math.sqrt(1 - partA));
+    return earthRadius * partB;
+  }
+
+  function getUserReferencePoint(bairro, cep) {
+    var cleanCep = onlyDigits(cep);
+    var cepPrefix = cleanCep.slice(0, 5);
+    var normalizedDistrict = normalizeText(bairro);
+
+    if (cepCenter[cepPrefix]) return cepCenter[cepPrefix];
+    if (districtCenter[normalizedDistrict]) return districtCenter[normalizedDistrict];
+    return null;
+  }
+
+  function getRankedUnits(bairro, cep, list) {
+    var point = getUserReferencePoint(bairro, cep);
+    var normalizedDistrict = normalizeText(bairro);
+    var cleanCep = onlyDigits(cep);
+
+    var ranked = list.map(function (unit) {
+      var score = 0;
+      var unitDistrict = normalizeText(unit.district);
+
+      if (normalizedDistrict && unitDistrict === normalizedDistrict) score -= 120;
+      if (cleanCep && unit.cep.indexOf(cleanCep.slice(0, 5)) === 0) score -= 100;
+      if (point) score += calculateDistanceKm(point, { lat: unit.lat, lon: unit.lon });
+
+      return { unit: unit, score: score };
+    });
+
+    ranked.sort(function (a, b) {
+      return a.score - b.score;
+    });
+
+    return ranked;
+  }
+
+  function buildOriginText(bairro, cep) {
+    var normalizedDistrict = normalizeText(bairro);
+    var cleanCep = onlyDigits(cep);
+
+    if (cleanCep.length >= 5) return cleanCep + ", Fortaleza, CE";
+    if (normalizedDistrict) return bairro.trim() + ", Fortaleza, CE";
+    return "";
+  }
+
+  function buildMapUrl(address) {
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+  }
+
+  function buildRouteUrl(origin, destination) {
+    return (
+      "https://www.google.com/maps/dir/?api=1&origin=" +
+      encodeURIComponent(origin) +
+      "&destination=" +
+      encodeURIComponent(destination)
+    );
+  }
+
+  function buildWhatsAppUrl(phone) {
+    return "https://wa.me/" + onlyDigits(phone);
+  }
+
+  function renderUnits(rankedUnits, hasFilter, originText) {
+    if (!resultsList) return;
+    resultsList.innerHTML = "";
+
+    rankedUnits.forEach(function (entry, index) {
+      var li = document.createElement("li");
+      li.className = "result-item";
+      if (hasFilter && index === 0) li.className += " top-result";
+
+      var closestLabel = hasFilter && index === 0 ? "<strong>Mais próximo:</strong> " : "";
+      var hasWhatsapp = Boolean(onlyDigits(entry.unit.whatsapp || ""));
+      li.innerHTML =
+        "<h3>" +
+        closestLabel +
+        entry.unit.name +
+        "</h3>" +
+        "<p><strong>Endereço:</strong> " +
+        entry.unit.address +
+        "</p>" +
+        "<p><strong>Bairro:</strong> " +
+        entry.unit.district +
+        " | <strong>CEP:</strong> " +
+        entry.unit.cep +
+        "</p>" +
+        "<p><strong>Detalhe:</strong> " +
+        entry.unit.note +
+        "</p>" +
+        '<div class="map-actions">' +
+        '<a class="map-link" href="' +
+        buildMapUrl(entry.unit.address) +
+        '" target="_blank" rel="noopener noreferrer">Abrir no mapa</a>' +
+        (originText
+          ? '<a class="map-link" href="' +
+            buildRouteUrl(originText, entry.unit.address) +
+            '" target="_blank" rel="noopener noreferrer">Traçar rota</a>'
+          : "") +
+        (hasWhatsapp
+          ? '<a class="map-link whatsapp-link" href="' +
+            buildWhatsAppUrl(entry.unit.whatsapp) +
+            '" target="_blank" rel="noopener noreferrer">WhatsApp da unidade</a>'
+          : '<span class="map-link whatsapp-missing">WhatsApp não informado</span>') +
+        "</div>";
+      resultsList.appendChild(li);
+    });
+  }
+
+  function initialRender() {
+    renderUnits(
+      filteredUnits.map(function (unit) {
+        return { unit: unit, score: 0 };
+      }),
+      false,
+      ""
+    );
+    if (statusMessage) {
+      if (requestedFilter && filteredUnits.length === 0) {
+        statusMessage.textContent = "Nenhuma unidade encontrada para este recurso no momento.";
+      } else if (requestedFilter) {
+        statusMessage.textContent =
+          "Mostrando: " + filterLabels[requestedFilter] + ". Digite bairro ou CEP para ordenar por proximidade.";
+      } else {
+        statusMessage.textContent = "Digite bairro ou CEP para ordenar por proximidade.";
+      }
+    }
+  }
+
+  function handleSearch(event) {
+    event.preventDefault();
+    var bairro = bairroInput ? bairroInput.value : "";
+    var cep = cepInput ? cepInput.value : "";
+    var hasFilter = normalizeText(bairro) || onlyDigits(cep);
+    var originText = buildOriginText(bairro, cep);
+
+    var rankedUnits = getRankedUnits(bairro, cep, filteredUnits);
+    renderUnits(rankedUnits, Boolean(hasFilter), originText);
+
+    if (statusMessage) {
+      if (requestedFilter && filteredUnits.length === 0) {
+        statusMessage.textContent = "Nenhuma unidade encontrada para este recurso no momento.";
+      } else if (!hasFilter) {
+        statusMessage.textContent = requestedFilter
+          ? "Mostrando: " + filterLabels[requestedFilter] + ". Informe bairro ou CEP para refinar."
+          : "Mostrando todas as unidades. Informe bairro ou CEP para refinar.";
+      } else {
+        statusMessage.textContent = requestedFilter
+          ? "Lista de " + filterLabels[requestedFilter] + " ordenada pela localidade mais próxima."
+          : "Lista ordenada pela localidade mais próxima da sua busca.";
+      }
+    }
+  }
+
+  if (form) form.addEventListener("submit", handleSearch);
+  initialRender();
+})();
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+FILE: styles.css
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #172033;
+  --muted: #51617d;
+  --border: #d4deec;
+  --danger: #d14343;
+  --danger-hover: #b93838;
+  --primary: #2a5bd7;
+  --primary-hover: #1f49b4;
+  --radius: 12px;
+  --maxw: 860px;
+  --font: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 var(--font);
+}
+
+.wrap {
+  width: min(100% - 2rem, var(--maxw));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 2rem 0 1.4rem;
+  border-bottom: 1px solid var(--border);
+  background: #eef2fb;
+}
+
+.site-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.site-tagline {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+main {
+  padding: 1.5rem 0 2rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.warning-card {
+  border-left: 5px solid var(--danger);
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.type-card p {
+  min-height: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-hover);
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 0 1rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.search-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.search-form input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem;
+  font: inherit;
+}
+
+.hint {
+  color: var(--muted);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.result-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.result-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #fafcff;
+}
+
+.result-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.result-item p {
+  margin: 0.2rem 0;
+}
+
+.map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+.map-link {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: #eef3ff;
+  color: var(--primary);
+  border-radius: 8px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.map-link:hover {
+  background: #e2ebff;
+}
+
+.whatsapp-link {
+  background: #e8f8ef;
+  border-color: #b7e6c6;
+  color: #107c41;
+}
+
+.whatsapp-link:hover {
+  background: #d9f2e5;
+}
+
+.whatsapp-missing {
+  background: #f3f5f8;
+  border-color: #e2e7f0;
+  color: #7a859a;
+  cursor: default;
+}
+
+.top-result {
+  border-color: #50a365;
+  box-shadow: 0 0 0 1px #50a365 inset;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  padding: 1rem 0 1.4rem;
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+FILE: landing.css
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+body {
+  background: radial-gradient(circle at 10% 10%, rgba(110, 168, 254, 0.15), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(205, 180, 219, 0.16), transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(168, 213, 186, 0.16), transparent 36%), #f8fafc;
+}
+
+.page-gradient {
+  background: linear-gradient(165deg, rgba(248, 250, 252, 0.95), rgba(232, 241, 255, 0.7));
+}
+
+.nav-link {
+  color: #4b5563;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #6ea8fe;
+  transform: translateY(-1px);
+}
+
+.illustration-card {
+  animation: floaty 7s ease-in-out infinite;
+}
+
+.feeling-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 132px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 25px rgba(38, 78, 126, 0.08);
+  font-weight: 600;
+  color: #4b5563;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feeling-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(38, 78, 126, 0.14);
+  border-color: rgba(110, 168, 254, 0.35);
+}
+
+.feeling-card span:first-child {
+  font-size: 1.7rem;
+  transition: transform 0.25s ease;
+}
+
+.feeling-card.is-selected {
+  background: linear-gradient(145deg, rgba(110, 168, 254, 0.2), rgba(205, 180, 219, 0.28));
+  border-color: rgba(110, 168, 254, 0.55);
+  box-shadow: 0 14px 30px rgba(110, 168, 254, 0.24);
+  color: #2f3f59;
+}
+
+.feeling-card.is-selected span:first-child {
+  transform: scale(1.12);
+}
+
+.feeling-card:focus-visible {
+  outline: 3px solid rgba(110, 168, 254, 0.4);
+  outline-offset: 2px;
+}
+
+.service-card {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 1.4rem;
+  padding: 1.3rem;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 28px rgba(38, 78, 126, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 34px rgba(38, 78, 126, 0.15);
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.62rem 1.05rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.pill-btn:hover {
+  transform: translateY(-1px);
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 1rem;
+  padding: 0.95rem;
+  background: rgba(255, 255, 255, 0.68);
+  color: #4b5563;
+  box-shadow: 0 8px 20px rgba(38, 78, 126, 0.08);
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 24px rgba(38, 78, 126, 0.13);
+}
+
+.resource-card svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #6ea8fe;
+}
+
+.quote-card {
+  margin: 0;
+  border-radius: 1.1rem;
+  padding: 1.2rem;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.78), rgba(205, 180, 219, 0.25));
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 24px rgba(38, 78, 126, 0.08);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.06rem;
+  color: #374151;
+}
+
+.footer-link {
+  color: #4b5563;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #6ea8fe;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  transition: all 0.25s ease;
+}
+
+.social-link:hover {
+  color: #6ea8fe;
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 767px) {
+  .feeling-card {
+    min-height: 108px;
+  }
+}

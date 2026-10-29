@@ -1,0 +1,192 @@
+body {
+  background: radial-gradient(circle at 10% 10%, rgba(110, 168, 254, 0.15), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(205, 180, 219, 0.16), transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(168, 213, 186, 0.16), transparent 36%), #f8fafc;
+}
+
+.page-gradient {
+  background: linear-gradient(165deg, rgba(248, 250, 252, 0.95), rgba(232, 241, 255, 0.7));
+}
+
+.nav-link {
+  color: #4b5563;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #6ea8fe;
+  transform: translateY(-1px);
+}
+
+.illustration-card {
+  animation: floaty 7s ease-in-out infinite;
+}
+
+.feeling-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 132px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 25px rgba(38, 78, 126, 0.08);
+  font-weight: 600;
+  color: #4b5563;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feeling-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(38, 78, 126, 0.14);
+  border-color: rgba(110, 168, 254, 0.35);
+}
+
+.feeling-card span:first-child {
+  font-size: 1.7rem;
+  transition: transform 0.25s ease;
+}
+
+.feeling-card.is-selected {
+  background: linear-gradient(145deg, rgba(110, 168, 254, 0.2), rgba(205, 180, 219, 0.28));
+  border-color: rgba(110, 168, 254, 0.55);
+  box-shadow: 0 14px 30px rgba(110, 168, 254, 0.24);
+  color: #2f3f59;
+}
+
+.feeling-card.is-selected span:first-child {
+  transform: scale(1.12);
+}
+
+.feeling-card:focus-visible {
+  outline: 3px solid rgba(110, 168, 254, 0.4);
+  outline-offset: 2px;
+}
+
+.service-card {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 1.4rem;
+  padding: 1.3rem;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 28px rgba(38, 78, 126, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 34px rgba(38, 78, 126, 0.15);
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.62rem 1.05rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.pill-btn:hover {
+  transform: translateY(-1px);
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 1rem;
+  padding: 0.95rem;
+  background: rgba(255, 255, 255, 0.68);
+  color: #4b5563;
+  box-shadow: 0 8px 20px rgba(38, 78, 126, 0.08);
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 24px rgba(38, 78, 126, 0.13);
+}
+
+.resource-card svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #6ea8fe;
+}
+
+.quote-card {
+  margin: 0;
+  border-radius: 1.1rem;
+  padding: 1.2rem;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.78), rgba(205, 180, 219, 0.25));
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 24px rgba(38, 78, 126, 0.08);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.06rem;
+  color: #374151;
+}
+
+.footer-link {
+  color: #4b5563;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #6ea8fe;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  transition: all 0.25s ease;
+}
+
+.social-link:hover {
+  color: #6ea8fe;
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 767px) {
+  .feeling-card {
+    min-height: 108px;
+  }
+}

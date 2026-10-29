@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Apoio Fortaleza: plataforma de apoio psicológico com acolhimento, atendimento urgente e recursos de saúde mental."
+    />
+    <title>Apoio Fortaleza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryBlue: "#6EA8FE",
+              softGreen: "#A8D5BA",
+              iceWhite: "#F8FAFC",
+              softLilac: "#CDB4DB",
+              elegantGray: "#4B5563"
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+              nunito: ["Nunito", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(38, 78, 126, 0.12)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body class="font-inter text-elegantGray bg-iceWhite">
+    <div class="min-h-screen page-gradient">
+      <header class="sticky top-0 z-50 backdrop-blur-md bg-white/75 border-b border-white/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+          <a href="#inicio" class="flex items-center gap-3">
+            <span
+              class="w-10 h-10 rounded-2xl bg-gradient-to-br from-primaryBlue to-softLilac text-white flex items-center justify-center shadow-soft"
+              aria-hidden="true"
+            >
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </span>
+            <span class="font-poppins text-xl font-semibold text-slate-800">Apoio Fortaleza</span>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium" aria-label="Navegação principal">
+            <a href="#inicio" class="nav-link">Início</a>
+            <a href="#apoio-imediato" class="nav-link">Apoio imediato</a>
+            <a href="#atendimento" class="nav-link">Atendimento</a>
+            <a href="#recursos" class="nav-link">Recursos</a>
+            <a href="#contato" class="nav-link">Contato</a>
+          </nav>
+
+          <a
+            href="urgencia.html"
+            class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primaryBlue to-softLilac hover:scale-[1.02] transition-all duration-300 shadow-soft"
+          >
+            <i data-lucide="siren" class="w-4 h-4"></i>
+            Preciso de ajuda
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section id="inicio" class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+          <div
+            class="grid lg:grid-cols-2 items-center gap-10 rounded-3xl p-6 sm:p-8 lg:p-12 bg-white/45 border border-white/70 backdrop-blur-xl shadow-soft reveal"
+          >
+            <div class="space-y-6">
+              <span
+                class="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 bg-softGreen/45 rounded-full px-4 py-1.5"
+              >
+                <i data-lucide="shield-heart" class="w-4 h-4"></i>
+                Acolhimento seguro e humano
+              </span>
+              <h1 class="font-poppins text-3xl sm:text-4xl lg:text-5xl text-slate-800 leading-tight">
+                Você não precisa enfrentar tudo sozinho.
+              </h1>
+              <p class="text-base sm:text-lg text-elegantGray/90 max-w-xl">
+                Encontre apoio psicológico, atendimento emergencial e locais de acolhimento perto de
+                você.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-2">
+                <a
+                  href="#atendimento"
+                  class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-white bg-primaryBlue hover:bg-blue-500 transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  <i data-lucide="compass" class="w-4 h-4"></i>
+                  Encontrar apoio
+                </a>
+                <a
+                  href="urgencia.html"
+                  class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-slate-700 bg-white border border-slate-200 hover:border-primaryBlue/40 hover:text-primaryBlue transition-all duration-300"
+                >
+                  <i data-lucide="triangle-alert" class="w-4 h-4"></i>
+                  Atendimento urgente
+                </a>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -top-10 -left-8 w-28 h-28 bg-softLilac/50 rounded-full blur-2xl"></div>
+              <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-softGreen/50 rounded-full blur-2xl"></div>
+              <div
+                class="relative bg-white/65 border border-white rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-soft illustration-card"
+              >
+                <svg viewBox="0 0 340 250" class="w-full h-auto" role="img" aria-label="Ilustração de acolhimento e escuta psicológica">
+                  <defs>
+                    <linearGradient id="bgAcolhe" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#6EA8FE" stop-opacity="0.2" />
+                      <stop offset="100%" stop-color="#CDB4DB" stop-opacity="0.28" />
+                    </linearGradient>
+                    <linearGradient id="personA" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#A8D5BA" />
+                      <stop offset="100%" stop-color="#8DC4A4" />
+                    </linearGradient>
+                    <linearGradient id="personB" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#6EA8FE" />
+                      <stop offset="100%" stop-color="#8EBBFF" />
+                    </linearGradient>
+                    <linearGradient id="heartSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#CDB4DB" />
+                      <stop offset="100%" stop-color="#B79ACC" />
+                    </linearGradient>
+                  </defs>
+
+                  <rect x="10" y="18" width="320" height="214" rx="34" fill="url(#bgAcolhe)" />
+
+                  <circle cx="118" cy="98" r="28" fill="url(#personA)" />
+                  <circle cx="222" cy="98" r="28" fill="url(#personB)" />
+
+                  <path
+                    d="M84 170c0-24 15-42 34-42h12c12 0 20 7 24 14 4-7 12-14 24-14h12c19 0 34 18 34 42"
+                    fill="none"
+                    stroke="#4B5563"
+                    stroke-opacity="0.28"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M98 164c10-22 24-33 42-33 13 0 21 5 30 16 9-11 17-16 30-16 18 0 32 11 42 33"
+                    fill="none"
+                    stroke="#F8FAFC"
+                    stroke-opacity="0.95"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M170 120c-8-10-22-3-22 8 0 10 11 17 22 25 11-8 22-15 22-25 0-11-14-18-22-8z"
+                    fill="url(#heartSoft)"
+                  />
+
+                  <path
+                    d="M122 96c4-3 8-4 12-4M206 96c4-3 8-4 12-4"
+                    stroke="#ffffff"
+                    stroke-opacity="0.65"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+
+                  <circle cx="170" cy="62" r="10" fill="#F8FAFC" opacity="0.9" />
+                  <path
+                    d="M170 50v-10M156 54l-7-7M184 54l7-7"
+                    stroke="#6EA8FE"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="0.7"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="apoio-imediato" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div class="text-center mb-8 reveal">
+            <h2 class="font-poppins text-2xl sm:text-3xl text-slate-800 mb-3">Como você está se sentindo?</h2>
+            <p class="text-elegantGray/90">Escolha uma opção para encontrar caminhos de cuidado e acolhimento.</p>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <button class="feeling-card reveal" type="button" aria-pressed="false"><span>😟</span><span>Ansiedade</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false"><span>😔</span><span>Tristeza</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false"><span>😰</span><span>Crise emocional</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false" data-url="rotina.html"><span>🌱</span><span>Quero acompanhamento</span></button>
+            <button class="feeling-card reveal" type="button" aria-pressed="false" data-url="https://www.cvv.org.br/"><span>💬</span><span>Preciso conversar</span></button>
+          </div>
+        </section>
+
+        <section id="atendimento" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div class="text-center mb-8 reveal">
+            <h2 class="font-poppins text-2xl sm:text-3xl text-slate-800 mb-3">Tipos de atendimento</h2>
+            <p class="text-elegantGray/90">Selecione o tipo de apoio ideal para seu momento.</p>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6">
+            <article class="service-card reveal">
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="font-poppins text-xl text-slate-800">🆘 Atendimento de urgência</h3>
+                  <p class="text-elegantGray mt-2">
+                    Para momentos de crise emocional intensa e necessidade de acolhimento imediato.
+                  </p>
+                </div>
+                <i data-lucide="shield-alert" class="w-8 h-8 text-primaryBlue"></i>
+              </div>
+              <a href="urgencia.html" class="pill-btn bg-primaryBlue text-white hover:bg-blue-500">Acessar urgência</a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 class="font-poppins text-xl text-slate-800">🌿 Atendimento de rotina</h3>
+                  <p class="text-elegantGray mt-2">
+                    Acompanhamento psicológico contínuo, prevenção e cuidado emocional.
+                  </p>
+                </div>
+                <i data-lucide="sprout" class="w-8 h-8 text-emerald-500"></i>
+              </div>
+              <a href="rotina.html" class="pill-btn bg-softGreen text-slate-800 hover:bg-emerald-300">
+                Acessar rotina
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section id="recursos" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div class="text-center mb-8 reveal">
+            <h2 class="font-poppins text-2xl sm:text-3xl text-slate-800 mb-3">Recursos rápidos</h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a href="https://www.cvv.org.br/" target="_blank" rel="noopener noreferrer" class="resource-card reveal"><i data-lucide="phone-call"></i><span>CVV (Centro de Valorização da Vida)</span></a>
+            <a href="rotina.html?tipo=caps" class="resource-card reveal"><i data-lucide="map-pin"></i><span>CAPS próximos</span></a>
+            <a href="rotina.html?tipo=ubs" class="resource-card reveal"><i data-lucide="cross"></i><span>UBS de Fortaleza</span></a>
+            <a href="rotina.html?tipo=consultorio-rua" class="resource-card reveal"><i data-lucide="map"></i><span>Consultório na Rua</span></a>
+            <a href="urgencia.html?tipo=hospital" class="resource-card reveal"><i data-lucide="building-2"></i><span>Hospitais</span></a>
+            <a href="rotina.html?tipo=atencao-primaria" class="resource-card reveal"><i data-lucide="stethoscope"></i><span>Atenção primária</span></a>
+            <a href="urgencia.html" class="resource-card reveal"><i data-lucide="contact-round"></i><span>Telefones úteis</span></a>
+            <a href="tel:192" class="resource-card reveal"><i data-lucide="siren"></i><span>Emergência 192</span></a>
+            <a href="rotina.html?tipo=universidade" class="resource-card reveal"><i data-lucide="graduation-cap"></i><span>Apoio psicológico em universidades</span></a>
+            <a href="rotina.html?tipo=convivencia-cultura" class="resource-card reveal"><i data-lucide="palette"></i><span>Convivência e cultura</span></a>
+          </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+          <div class="grid md:grid-cols-3 gap-4">
+            <blockquote class="quote-card reveal">“Pedir ajuda é um ato de coragem.”</blockquote>
+            <blockquote class="quote-card reveal">“Você merece cuidado.”</blockquote>
+            <blockquote class="quote-card reveal">“Sua saúde mental importa.”</blockquote>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contato" class="border-t border-white/70 bg-white/60 backdrop-blur-sm mt-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="font-poppins text-lg text-slate-800 mb-3">Apoio Fortaleza</h3>
+              <p class="text-sm text-elegantGray">
+                Plataforma informativa para acesso rápido a recursos de saúde mental em Fortaleza.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700 mb-3">Links úteis</h4>
+              <ul class="space-y-2 text-sm">
+                <li><a href="#inicio" class="footer-link">Início</a></li>
+                <li><a href="urgencia.html" class="footer-link">Apoio imediato</a></li>
+                <li><a href="rotina.html" class="footer-link">Atendimento</a></li>
+                <li><a href="#recursos" class="footer-link">Recursos</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-700 mb-3">Contato</h4>
+              <ul class="space-y-2 text-sm text-elegantGray">
+                <li>Email: contato@apoiofortaleza.com.br</li>
+                <li>Emergência: <a href="tel:192" class="footer-link">192 (SAMU)</a></li>
+                <li>CVV: <a href="tel:188" class="footer-link">188</a></li>
+              </ul>
+              <div class="flex items-center gap-3 mt-4">
+                <a href="#" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-link"><i data-lucide="linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-slate-200/70 text-sm text-elegantGray">
+            <p>Este site possui caráter informativo e não substitui atendimento profissional.</p>
+            <p class="mt-1">© <span id="year"></span> Apoio Fortaleza. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("revealed");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.16 }
+      );
+
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        observer.observe(el);
+      });
+
+      var feelingButtons = document.querySelectorAll(".feeling-card");
+      feelingButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          feelingButtons.forEach(function (item) {
+            item.classList.remove("is-selected");
+            item.setAttribute("aria-pressed", "false");
+          });
+          button.classList.add("is-selected");
+          button.setAttribute("aria-pressed", "true");
+
+          var destination = button.getAttribute("data-url");
+          if (destination) {
+            var isExternal = destination.indexOf("http") === 0;
+            if (isExternal) {
+              window.open(destination, "_blank", "noopener,noreferrer");
+            } else {
+              window.location.href = destination;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
